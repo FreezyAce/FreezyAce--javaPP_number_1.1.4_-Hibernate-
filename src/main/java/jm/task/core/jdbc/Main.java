@@ -22,21 +22,25 @@ public class Main {
 
         userService.dropUsersTable(); // очистка таблицы если есть.
         userService.createUsersTable(); // создание таблицы
-//        userService.cleanUsersTable(); // очистка всех юзеров в таблице
-//        Util.getSessionFactory();
-
-
+        userService.cleanUsersTable(); // очистка всех юзеров в таблице
 
         userService.saveUser(userTest[0][0], userTest[0][1], (byte) Integer.parseInt(userTest[0][2]));
         userService.saveUser(userTest[1][0], userTest[1][1], (byte) Integer.parseInt(userTest[1][2]));
         userService.saveUser(userTest[2][0], userTest[2][1], (byte) Integer.parseInt(userTest[2][2]));
         userService.saveUser(userTest[3][0], userTest[3][1], (byte) Integer.parseInt(userTest[3][2]));
-//
-//        List<User> users = userService.getAllUsers();
-//
-//        System.out.println(users.get(0).getName() + " " + users.get(0).getLastName() + " " + users.get(0).getAge());
-//        System.out.println(users.get(1).getName() + " " + users.get(1).getLastName() + " " + users.get(1).getAge());
-//        System.out.println(users.get(2).getName() + " " + users.get(2).getLastName() + " " + users.get(2).getAge());
-//        System.out.println(users.get(3).getName() + " " + users.get(3).getLastName() + " " + users.get(3).getAge());
+
+        List<User> users = userService.getAllUsers();
+
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println(users.get(i).getName() + " " + users.get(i).getLastName() + " " + users.get(i).getAge());
+        }
+
+        userService.removeUserById(1L);
+
+        users = userService.getAllUsers();
+
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println(users.get(i).getName() + " " + users.get(i).getLastName() + " " + users.get(i).getAge());
+        }
     }
 }

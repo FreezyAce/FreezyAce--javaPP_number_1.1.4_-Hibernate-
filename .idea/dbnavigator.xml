@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5caec016-9d5a-4acf-a75e-91da333de4f2">
-      <console name="lol4k" type="STANDARD" schema="" session="Main" />
+      <console name="lol4k" type="STANDARD" schema="mysql" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -38,11 +38,17 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="5caec016-9d5a-4acf-a75e-91da333de4f2" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="5caec016-9d5a-4acf-a75e-91da333de4f2" dataset="mysql.general_log" active-filter-id="" />
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f538dfe8-3854-4682-9f27-af15a8a2adb8/console.sql" connection-id="virtual-mysql-connection" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -63,7 +69,9 @@
     <diagnostics-history />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>

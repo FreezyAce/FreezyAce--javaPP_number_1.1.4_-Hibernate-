@@ -3,7 +3,7 @@ package jm.task.core.jdbc.model;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "users")
+@Table (name = "lol4k")
 
 public class User {
     @Id
@@ -26,7 +26,6 @@ public class User {
     }
 
     public User() {
-
     }
 
     public Long getId() {
@@ -59,5 +58,14 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+    @Override
+    public String toString() {
+        return '\n' + "User {" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
